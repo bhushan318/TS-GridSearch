@@ -50,9 +50,8 @@ class ETSGRID:
             error_mae_fitting = round(
                 mean_absolute_error(self.train, model.fittedvalues)
             )
-            error_mape_fitting = (
-                round(mean_absolute_percentage_error(self.train, model.fittedvalues))
-                * 100
+            error_mape_fitting = round(
+                mean_absolute_percentage_error(self.train, model.fittedvalues) * 100
             )
 
             if self.test.empty:
@@ -68,8 +67,8 @@ class ETSGRID:
                 error_mae_prediction = round(
                     mean_absolute_error(self.test, predictions)
                 )
-                error_mape_prediction = (
-                    round(mean_absolute_percentage_error(self.test, predictions)) * 100
+                error_mape_prediction = round(
+                    mean_absolute_percentage_error(self.test, predictions) * 100
                 )
 
             return (
